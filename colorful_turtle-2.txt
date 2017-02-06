@@ -1,0 +1,28 @@
+# -*- coding: utf8 -*-
+import turtle
+window = turtle.Screen()
+window.bgcolor("lightgreen")
+john = turtle.Turtle()
+john.shape("turtle")
+
+
+colors = ["firebrick","red","orangered","yellow","green","aqua",
+          "blue","navy","purple","black","white","gray"]
+john.penup()                      # 提筆
+size = 20
+for pen_color in colors:
+        john.color(pen_color)
+        john.penup()                      # 提筆
+        
+        john.forward(50)       # 往前走
+        
+        john.pendown()                      # 下筆
+        john.forward(20)       # 往前走
+        john.penup()                      # 提筆
+        john.forward(20)       # 往前走
+        john.stamp()             # 蓋章
+        john.penup()                      # 提筆
+        john.forward(-90)       # 往前走
+        john.left(30)           # 向右轉
+       
+window.exitonclick()

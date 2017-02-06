@@ -1,0 +1,30 @@
+# -*- coding: utf8 -*-
+import turtle
+window = turtle.Screen()
+window.bgcolor("lightgreen")
+def draw_multicolor_square(t, sz):
+        for i in range(4):
+                
+                t.forward(sz)
+                t.left(90)
+
+john = turtle.Turtle()
+john.shape("turtle")
+john.pensize(5)  
+
+colors = 2*["firebrick","red","orangered","yellow","green",
+	"aqua","blue","navy","purple","gray"]
+
+#john.penup()                      # 提筆
+
+size = 20
+
+for pen_color in colors:
+        draw_multicolor_square(john,100)
+        john.color(pen_color)        
+        john.pendown()           # 下筆       
+        john.left(18)           # 向右轉
+
+
+       
+window.exitonclick()
